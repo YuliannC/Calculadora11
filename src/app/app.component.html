@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+</head>
+<body>
+  <br> <br>
+  <form name="calculator" class="center">
+    <h2 class="tex">Calculadora</h2>
+    <input type="textfield" class="pantalla" name="visualiza" id="visualiza" [(ngModel)]="visualiza" placeholder="0">
+    <input type="hidden" name="memoria" id="memoria" [(ngModel)]="memoria" >
+    
+  <br><br>
+  <input type="button" value="%" class="color" (click)="porcentaje()">
+  <input type="button" value="C" class="color" (click)="borrar()">
+  <input type="button" value="CE" class="color" (click)="limpia1()">
+  <input type="button" value="÷" class="color" (click)="divide()">
+  <br>
+  <input type="button" value="7" class="color" (click)="siete('')">
+  <input type="button" value="8" class="color" (click)="ocho('')">
+  <input type="button" value="9" class="color" (click)="nueve('')">
+  <input type="button" value="x" class="color" (click)="multiplica()">
+  <br>
+  <input type="button" value="4" class="color" (click)="cuatro('')">
+  <input type="button" value="5" class="color" (click)="cinco('')">
+  <input type="button" value="6" class="color" (click)="seis('')">
+  <input type="button" value="-" class="color" (click)="resta()">
+  <br>
+  <input type="button" value="1" class="color" (click)="uno('')">
+  <input type="button" value="2" class="color" (click)="dos('')">
+  <input type="button" value="3" class="color" (click)="tres('')">
+  <input type="button" value="+" class="color" (click)="suma()">
+  <br>
+  <input type="button" value=","  class="color" (click)="coma()">
+  <input type="button" value="0" class="color" (click)="cero('')">
+  <input type="button" value="." class="color" (click)="punto()">
+  <input type="button" value="=" (click)="resultado()" class="igual">
+  </form>
+</body>
+</html>
